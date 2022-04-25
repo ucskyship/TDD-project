@@ -14,7 +14,7 @@ public class Kata {
 
     public int quotient(int firstNumber, int secondNumber) {
         if (secondNumber == 0){
-            return secondNumber/firstNumber;
+            return 0;
         }
         return firstNumber/secondNumber;
     }
