@@ -11,18 +11,22 @@ public class AutoBike {
 
 
     public void setWork(boolean working) {
+
         isOn = working;
     }
 
     public boolean getOnValue() {
+
         return isOn;
     }
 
     public void engageGear(boolean activated) {
+
         gear = activated;
     }
 
     public boolean getGearStatus() {
+
         return gear;
     }
 
