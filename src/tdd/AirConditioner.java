@@ -9,13 +9,13 @@ public class AirConditioner {
         return isOn;
     }
 
-    public void setWork(boolean working) {
+    public void setOn(boolean working) {
 
         isOn = working;
     }
 
     public void setTemperature(int temp) {
-        if (temperature >= 0) {
+        if (temperature == 16) {
             temperature = temp;
         }
         if (temperature > 30) {

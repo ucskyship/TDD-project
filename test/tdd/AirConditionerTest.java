@@ -9,21 +9,21 @@ public class AirConditionerTest {
     @Test
     public void acOnTest(){
         //given that I have an AC
-        AirConditioner ucjToshiba = new AirConditioner();
+        AirConditioner acToshiba = new AirConditioner();
         //when I turn it on
-        ucjToshiba.setWork(true);
-        boolean ucjAC = ucjToshiba.getOnValue();
+        acToshiba.setOn(true);
+        //boolean ucjAC = ucjToshiba.getOnValue();
         //check that it is on
-        assertTrue(ucjAC);
+        assertTrue(acToshiba.getOnValue());
     }
     @Test
     public void acOffTest(){
         //given that I have an AC
         AirConditioner ucjToshiba = new AirConditioner();
         //ac is on
-        ucjToshiba.setWork(true);
+        ucjToshiba.setOn(true);
         //when I turn it off
-        ucjToshiba.setWork(false);
+        ucjToshiba.setOn(false);
         //check that it is off
         assertFalse(ucjToshiba.getOnValue());
     }
@@ -31,7 +31,7 @@ public class AirConditionerTest {
     public void acIncreaseTemperatureTest(){
         //given that I have an AC
         AirConditioner ucjToshiba = new AirConditioner();
-        ucjToshiba.setWork(true);
+        ucjToshiba.setOn(true);
         ucjToshiba.setTemperature(16);
         //when I increase the temperature
         ucjToshiba.setTemperature(30);
@@ -42,7 +42,7 @@ public class AirConditionerTest {
     public void decreaseTemperatureTest(){
         //given that I have an AC
         AirConditioner ucjToshiba = new AirConditioner();
-        ucjToshiba.setWork(true);
+        ucjToshiba.setOn(true);
         ucjToshiba.setTemperature(30);
         ucjToshiba.setTemperature(17);
         //check that temperature decreases
@@ -52,7 +52,7 @@ public class AirConditionerTest {
     public void excessIncreaseTemperatureTest(){
         //given that I have an AC
         AirConditioner ucjToshiba = new AirConditioner();
-        ucjToshiba.setWork(true);
+        ucjToshiba.setOn(true);
         ucjToshiba.setTemperature(30);
         ucjToshiba.setTemperature(33);
         //check that temperature is still 30
@@ -62,7 +62,7 @@ public class AirConditionerTest {
     public void excessDecreaseTemperature(){
         //given that I have an AC
         AirConditioner ucjToshiba = new AirConditioner();
-        ucjToshiba.setWork(true);
+        ucjToshiba.setOn(true);
         ucjToshiba.setTemperature(16);
         ucjToshiba.setTemperature(12);
         //check that temperature is still 16
