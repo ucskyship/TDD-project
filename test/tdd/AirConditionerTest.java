@@ -8,45 +8,37 @@ public class AirConditionerTest {
 
     @Test
     public void acOnTest(){
-        //given that I have an AC
-        AirConditioner acToshiba = new AirConditioner();
-        //when I turn it on
-        acToshiba.setOn(true);
+        AirConditioner acToshiba = new AirConditioner();            //given that I have an AC
+        acToshiba.setOn(true);                                      //when I turn it on
         //boolean ucjAC = ucjToshiba.getOnValue();
-        //check that it is on
-        assertTrue(acToshiba.getOnValue());
+        assertTrue(acToshiba.getOnValue());                         //check that it is on
     }
     @Test
     public void acOffTest(){
-        //given that I have an AC
-        AirConditioner ucjToshiba = new AirConditioner();
-        //ac is on
-        ucjToshiba.setOn(true);
-        //when I turn it off
-        ucjToshiba.setOn(false);
-        //check that it is off
-        assertFalse(ucjToshiba.getOnValue());
+
+        AirConditioner ucjToshiba = new AirConditioner();           //given that I have an AC
+        ucjToshiba.setOn(true);                                     //ac is on
+        ucjToshiba.setOn(false);                                    //when I turn it off
+        assertFalse(ucjToshiba.getOnValue());                       //check that it is off
     }
     @Test
     public void acIncreaseTemperatureTest(){
-        //given that I have an AC
-        AirConditioner ucjToshiba = new AirConditioner();
-        ucjToshiba.setOn(true);
+
+        AirConditioner ucjToshiba = new AirConditioner();           //given that I have an AC
+        ucjToshiba.setOn(true);                                     //given that my AC is on
         ucjToshiba.setTemperature(16);
-        //when I increase the temperature
-        ucjToshiba.setTemperature(30);
-        //check that it is on
-        assertEquals(30, ucjToshiba.getTemperature());
+        ucjToshiba.increaseTemperature();                              //when I increase the temperature
+        assertEquals(17, ucjToshiba.getTemperature());      //check that it is on
     }
     @Test
     public void decreaseTemperatureTest(){
         //given that I have an AC
         AirConditioner ucjToshiba = new AirConditioner();
         ucjToshiba.setOn(true);
-        ucjToshiba.setTemperature(30);
-        ucjToshiba.setTemperature(17);
+        ucjToshiba.setTemperature(16);
+        ucjToshiba.decreaseTemperature();
         //check that temperature decreases
-        assertEquals(17, ucjToshiba.getTemperature());
+        assertEquals(16, ucjToshiba.getTemperature());
     }
     @Test
     public void excessIncreaseTemperatureTest(){
@@ -54,7 +46,8 @@ public class AirConditionerTest {
         AirConditioner ucjToshiba = new AirConditioner();
         ucjToshiba.setOn(true);
         ucjToshiba.setTemperature(30);
-        ucjToshiba.setTemperature(33);
+        ucjToshiba.increaseTemperature();
+        ucjToshiba.increaseTemperature();
         //check that temperature is still 30
         assertEquals(30, ucjToshiba.getTemperature());
     }
@@ -64,7 +57,8 @@ public class AirConditionerTest {
         AirConditioner ucjToshiba = new AirConditioner();
         ucjToshiba.setOn(true);
         ucjToshiba.setTemperature(16);
-        ucjToshiba.setTemperature(12);
+        ucjToshiba.decreaseTemperature();
+        ucjToshiba.decreaseTemperature();
         //check that temperature is still 16
         assertEquals(16, ucjToshiba.getTemperature());
     }

@@ -6,7 +6,7 @@ import java.util.Scanner;
 //                        Prompt user to input a score number using the keyboard
 //                        Store user input
 //                        Score users according to their score to determine if they pass or fail
-//                          if score is greater pr equal to 55, output Pass
+//                          if score is greater or equal to 55, output Pass
 //                          if score is lesser than 55 output Fail.
 
 public class ScoreApp {

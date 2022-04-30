@@ -43,7 +43,7 @@ public class KataTest {
         assertEquals(0, result);
     }
 //                              PseudoCode:
-//  Given that I have iam a student;
+//  Given that Iam a student;
 //  When I enter my student score;
 //  Output grades as follows:
 //      If student score is greater and equal to 90, and student score is lesser or equal to 100, output Grade A;

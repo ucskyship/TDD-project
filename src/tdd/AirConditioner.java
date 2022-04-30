@@ -15,18 +15,22 @@ public class AirConditioner {
     }
 
     public void setTemperature(int temp) {
-        if (temperature == 16) {
-            temperature = temp;
-        }
-        if (temperature > 30) {
-            temperature = 30;
-        }
-        if (temperature < 16) {
-            temperature = 16;
-        }
+        temperature = temp;
     }
 
     public int getTemperature() {
         return temperature;
+    }
+
+    public void increaseTemperature() {
+        if (temperature >= 16 && temperature < 30){
+            temperature++;
+        }
+    }
+
+    public void decreaseTemperature() {
+        if (temperature > 16 && temperature < 30){
+            temperature--;
+        }
     }
 }
