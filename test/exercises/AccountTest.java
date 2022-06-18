@@ -1,4 +1,4 @@
-package tdd;
+package exercises;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -9,7 +9,7 @@ public class AccountTest {
 
 
     @Test
-    public void acountCanBeCreatedTest() {
+    public void accountCanBeCreatedTest() {
         //given I have created an account
         Account nepaAccount = new Account();
         //when I check my balance
@@ -42,7 +42,7 @@ public class AccountTest {
 
     @Test
     @DisplayName("Deposit negative amount should not change balance test")
-    public void deositNegativeAmount() {
+    public void depositNegativeAmount() {
         // given that I have an account
         Account jonneryAccount = new Account();
         // if i deposit negative amount
@@ -67,7 +67,7 @@ public class AccountTest {
     @Test
     @DisplayName("Withdraw excess amount from the available balance")
     public void excessWithdrawal() {
-        //given that i have an account
+        //given that I have an account
         Account lojayAccount = new Account();
         // when I deposit
         lojayAccount.deposit(5_000);

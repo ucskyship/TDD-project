@@ -1,4 +1,4 @@
-package tdd;
+package exercises;
 
 public class AutoBike {
     private boolean isOn;

@@ -1,8 +1,9 @@
-package tdd;
+package exercises;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class KataTest {
     @Test
@@ -80,5 +81,22 @@ public class KataTest {
         Kata mySchool = new Kata();
         String studentScore = mySchool.getGrade(50);
         assertEquals("Grade F", studentScore);
+    }
+//
+//
+//
+//
+//
+    @Test public void factorsTest(){
+        int factors = Kata.noOfFactorsOf(5);
+        assertEquals(2, factors);
+
+        factors = Kata.noOfFactorsOf(10);
+        assertEquals(4, factors);
+    }
+    @Test
+    public void primeNumberTest(){
+        boolean isPrime = Kata.isPrime(5);
+        assertTrue(isPrime);
     }
 }

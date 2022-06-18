@@ -1,4 +1,4 @@
-package tdd;
+package exercises;
 
 //                                          PseudoCode:
 //      @DisplayName:("This program test score and grade the student according to the score range")

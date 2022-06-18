@@ -1,4 +1,4 @@
-package tdd;
+package exercises;
 
 public class Account {
     private int balance;
@@ -18,6 +18,4 @@ public class Account {
             balance = balance - amount;
         }
     }
-
-
 }

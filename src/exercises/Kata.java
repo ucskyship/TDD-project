@@ -1,6 +1,24 @@
-package tdd;
+package exercises;
 
 public class Kata {
+
+    public Kata() {
+    }
+
+    public static int noOfFactorsOf(int number) {
+        int factors = 0;
+        int i = 0;
+        while(i <= number) {
+            if (number % i == 0) factors++;
+            i++;
+        }
+        return factors;
+    }
+
+    public static boolean isPrime(int number) {
+        if (noOfFactorsOf(number) == 2) return true;
+        return false;
+    }
 
     public int add(int firstNumber, int secondNumber) {
 

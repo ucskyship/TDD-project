@@ -1,4 +1,4 @@
-package tdd;
+package exercises;
 
 import java.util.Scanner;
 //                                          PseudoCode:

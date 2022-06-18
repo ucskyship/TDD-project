@@ -1,4 +1,4 @@
-package tdd;
+package exercises;
 
 public class Loop {
     public static void main(String[] args) {
